@@ -67,6 +67,7 @@ h2::after {
     padding: 4px;
     color: #5a5a5a;
     font-size: 15px;
+    transition-duration: .2s;
 }
 
 .header-list:hover{
@@ -129,6 +130,12 @@ h2::after {
     width: 350px;
     display: inline-block;
     display: flex;
+    transition-duration: .2s;
+}
+
+.info-content:hover {
+    opacity: .7;
+    transform: scale(1.05);
 }
 
 .info-wrapper {
@@ -183,7 +190,7 @@ h2::after {
         border-right: solid 2px #080808;
         position: absolute;
         left: 85px;
-        top: 2px;
+        top: 0px;
         transform: rotate(45deg);
 }
 
@@ -310,6 +317,7 @@ h2::after {
     background-color: #e0e0e0;
     border: none;
     border-radius: 2px;
+    transition-duration: .2s;
 } 
 
 .contact-button:hover {
@@ -335,6 +343,7 @@ h2::after {
 .fa-facebook-f,
 .fa-twitter {
     padding: 8px;
+    transition-duration: .2s;
 }
 
 .fa-twitter {
