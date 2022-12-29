@@ -1,17 +1,45 @@
 
-
+ヘッダー固定
 $(function () {
     var navPos = $("nav").offset().top;
+    var pageWidth = $('.header').css('width');
+    if ($('header-logo-area').length) {
+        var headerPos = $("header-logo-area").offset().top;
+    }
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > navPos) {
-            $("nav").css("position", "fixed");
-        } else {
-            $("nav").css("position", "static");
-        }
-    });
+    if (pageWidth > 650) {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > navPos) {
+                $("nav").css("position", "fixed");
+            } else {
+                $("nav").css("position", "static");
+            }
+        });
+    } else if (pageWidth < 650) {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > headerPos) {
+                $(".header-logo-area").css("position", "fixed");
+            } else {
+                $(".header-logo-area").css("position", "static");
+            }
+        });
+    }
 });
 
+
+// $(function () {
+//     var navPos = $("nav").offset().top;
+//     $(window).scroll(function () {
+//         if ($(window).scrollTop() > navPos) {
+//             $("nav").css("position", "fixed");
+//         } else {
+//             $("nav").css("position", "static");
+//         }
+//     });
+// });  
+
+
+// トップに戻るボタン
 function scrollTop() {
     const target = document.getElementById('scroll-top-button');
     target.addEventListener('click', () => {

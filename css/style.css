@@ -62,7 +62,6 @@ h2::after {
     z-index: 10;
 }
 
-
 .header-lists {
     display: flex;
     justify-content: center;
@@ -532,6 +531,12 @@ h2::after {
 }
 
 @media(max-width:650px) {
+
+    .header {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
     .header-nav {
         display: none;
