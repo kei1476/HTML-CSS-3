@@ -1,11 +1,13 @@
 
 // ヘッダー固定
-$(function () {
+
+function headerfix() {
     var navPos = $("nav").offset().top;
-    var pageWidth = $(".header").width();
     var headerPos = $(".header-logo-area").offset().top;
-
-
+    var pageWidth = $(".header").width();
+    
+    console.log(pageWidth);
+    
     if (pageWidth > 650) {
         $(window).scroll(function () {
             if ($(window).scrollTop() > navPos) {
@@ -14,7 +16,7 @@ $(function () {
                 $("nav").css("position", "static");
             }
         });
-    } else if (pageWidth < 650) {
+    } else if (pageWidth <= 650) {
         $(window).scroll(function () {
             if ($(window).scrollTop() > headerPos) {
                 $(".header-logo-area").css("position", "fixed");
@@ -22,8 +24,13 @@ $(function () {
                 $(".header-logo-area").css("position", "static");
             }
         });
-    }
+    }   
+}
+
+$(function () {
+    headerfix();
 });
+
 
 // トップに戻るボタン
 function scrollTop() {
