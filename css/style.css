@@ -574,13 +574,22 @@ h2::after {
         font-size: 26px;
     }
 
+    .header-logo-area {
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        border-bottom: 1px solid rgba(189, 186, 186, .7);
+        padding: 2px 0 10px 0;
+        z-index: 10;
+    }
+
     .logo-text {
         font-size: 8px;
     }
 
     .top-image-area {
         height: 280px;
-        margin-top: 8px;
     }
 
     .top-image-text {

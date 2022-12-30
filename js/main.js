@@ -1,11 +1,10 @@
 
-ヘッダー固定
+// ヘッダー固定
 $(function () {
     var navPos = $("nav").offset().top;
-    var pageWidth = $('.header').css('width');
-    if ($('header-logo-area').length) {
-        var headerPos = $("header-logo-area").offset().top;
-    }
+    var pageWidth = $(".header").width();
+    var headerPos = $(".header-logo-area").offset().top;
+
 
     if (pageWidth > 650) {
         $(window).scroll(function () {
@@ -25,19 +24,6 @@ $(function () {
         });
     }
 });
-
-
-// $(function () {
-//     var navPos = $("nav").offset().top;
-//     $(window).scroll(function () {
-//         if ($(window).scrollTop() > navPos) {
-//             $("nav").css("position", "fixed");
-//         } else {
-//             $("nav").css("position", "static");
-//         }
-//     });
-// });  
-
 
 // トップに戻るボタン
 function scrollTop() {
